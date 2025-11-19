@@ -30,6 +30,8 @@ echo "Virtual environment created."
 # Note: The 'source' command only affects the current script's environment, not the user's terminal after the script finishes.
 echo "Activating virtual environment..."
 source "$VENV_PATH/bin/activate"
+sudo apt install boxes -y
+sudo apt install lolcat -y
 
 # 3. Install dependencies
 echo "Installing dependencies from requirements.txt..."
