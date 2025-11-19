@@ -30,7 +30,7 @@ Follow these steps to set up and run `HackBox` on your local machine, ideally ru
 * **Git** (for cloning the repository)
 * **Root/sudo privileges** for running the installation script.
 
-### Setup Guide
+### Setup Guide (Corrected Sequence)
 
 1.  **Clone the Repository** ⬇️
     Open your terminal and clone the project using Git:
@@ -46,15 +46,19 @@ Follow these steps to set up and run `HackBox` on your local machine, ideally ru
     cd HackBox
     ```
 
-3.  **Install Dependencies and Run Setup** ⚙️
-    The `install.sh` script handles setting up the environment and installing required external tools and Python libraries (from `requirement.txt`).
+3.  **Make the Installation Script Executable** ⚙️
+    Give execute permission to the installation script (`install.sh`):
 
     ```bash
-    # Install dependencies
+    chmod +x install.sh
+    ```
+
+4.  **Install Dependencies and Run Setup** ⚡
+    The script `install.sh` handles setting up the environment and installing required external tools and Python libraries.
+
+    ```bash
+    # Run setup script with sudo
     sudo bash install.sh
-    
-    # Optional: ensure the main script is executable (though 'install.sh' may handle this)
-    chmod +x hackbox.py
     ```
 
     > **Note:** The script runs with `sudo` and interacts with system-level tools, which is necessary for many cybersecurity operations.
